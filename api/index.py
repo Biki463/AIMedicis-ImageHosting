@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 # Add routes with /api prefix
-app.include_router(home_router, prefix="/api")
-app.include_router(gallery_router, prefix="/api")
-app.include_router(images_router, prefix="/api")
-app.include_router(delete_router, prefix="/api")
+app.include_router(home_router, prefix="/")
+app.include_router(gallery_router, prefix="/")
+app.include_router(images_router, prefix="/")
+app.include_router(delete_router, prefix="/")
