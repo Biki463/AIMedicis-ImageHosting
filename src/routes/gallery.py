@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import HTMLResponse
-from services.database import fs
+from Database.database import fs
 
 router = APIRouter()
 

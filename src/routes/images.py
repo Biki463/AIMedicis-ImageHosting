@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import Response
 from bson import ObjectId
-from services.database import fs
+from Database.database import fs
 
 router = APIRouter()
 
