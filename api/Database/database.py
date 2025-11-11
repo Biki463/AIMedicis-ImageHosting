@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import gridfs
 
 # ⚠️ Do NOT use fallback here. Vercel must provide this.
-MONGO_URI = os.environ["MONGO_URI"]  # Raises error if not provided
+MONGO_URI = "mongodb+srv://21cs191:biki12345@cluster0.nberai4.mongodb.net/"  # Raises error if not provided
 
 client = MongoClient(MONGO_URI)
 
