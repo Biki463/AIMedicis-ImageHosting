@@ -121,8 +121,8 @@ uvicorn api.index:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Then open your browser and visit:
-- **Home**: http://localhost:8000/api/
-- **Gallery**: http://localhost:8000/api/gallery
+- **Home**: https://ai-medicis-image-hosting.vercel.app/api/
+- **Gallery**: https://ai-medicis-image-hosting.vercel.app/api/gallery
 
 ### Alternative: Using main.py
 
@@ -141,7 +141,7 @@ python main.py
 - **File**: `api/routes/home.py`
 
 ```bash
-curl http://localhost:8000/api/
+curl https://ai-medicis-image-hosting.vercel.app/api/
 ```
 
 **Response:**
@@ -186,7 +186,7 @@ curl http://localhost:8000/api/gallery
 
 **Example:**
 ```bash
-curl http://localhost:8000/api/images/507f1f77bcf86cd799439011 -o image.png
+curl https://ai-medicis-image-hosting.vercel.app/api/images/507f1f77bcf86cd799439011 -o image.png
 ```
 
 **Error Response (404):**
