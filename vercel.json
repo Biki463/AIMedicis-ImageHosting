@@ -1,15 +1,22 @@
 {
   "buildCommand": "pip install -r requirements.txt",
-  "devCommand": "uvicorn main:app --reload --host 0.0.0.0 --port 3000",
+  "framework": "fastapi",
+  "public": false,
   "functions": {
     "main.py": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "memory": 1024
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/main.py"
+      "src": "/(.*)",
+      "dest": "/main.py",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH"]
     }
-  ]
+  ],
+  "env": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . || exit 0"
 }
